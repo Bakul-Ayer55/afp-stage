@@ -1,0 +1,232 @@
+@import '../base/variables', '../base/mixins';
+
+.page__ttl {
+  &__hdng {
+    font-size: $font_size_72;
+    line-height: 5rem;
+    color: $bodyColor;
+    font-family: $primary_regular;
+    margin: 0;
+
+    @include devices(mobile) {
+      font-size: $font_size_64;
+      word-break: break-all;
+    }
+
+    em {
+      font-style: normal;
+      color: $primary;
+    }
+
+    &__dash {
+      color: $secondary;
+    }
+  }
+
+  &__desc {
+    color: $bodyColor;
+    font-size: 1.25rem;
+    line-height: 2rem;
+
+    margin: 1.875rem 0 0;
+  }
+}
+
+.block__ttl {
+  margin-bottom: 4.25rem;
+
+  @include devices(mobile-tablet) {
+    margin-bottom: 3rem;
+  }
+
+  &.mb-0 {
+    @include devices(mobile) {
+      margin-bottom: 3.5rem !important;
+    }
+  }
+
+  .block__ttl__hdng {
+    font-size: $font_size_44;
+    line-height: 2.75rem;
+    color: $bodyColor;
+    margin: 0;
+    font-family: $primary_bold;
+
+    @include devices(mobile-tablet) {
+      font-size: $font_size_28;
+      line-height: 2.5rem;
+      word-break: break-all;
+    }
+
+    br {
+      @include devices(mobile-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .block__ttl__desc,
+  p {
+    display: block;
+    width: 100%;
+    font-size: $font_size_18;
+    line-height: 2.125rem;
+    margin: 40px 0 30px;
+
+    @include devices(mobile-tablet) {
+      font-size: $font_size_18;
+      line-height: 1.75rem;
+      margin: 20px 0;
+    }
+
+    br {
+      @include devices(mobile-tablet) {
+        display: none;
+      }
+
+      @include devices(tablet-landscape) {
+        display: none;
+      }
+    }
+
+    @include devices(mobile-tablet) {
+      padding: 0 !important;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__primary {
+    .block__ttl__hdng {
+      color: $primary;
+    }
+  }
+
+  &__wt {
+    border-bottom-color: $white;
+    .block__ttl__hdng,
+    .block__ttl__hdng span,
+    .block__ttl__desc,
+    p,
+    .block__ttl__tagline {
+      color: $white;
+    }
+
+    &:after {
+      background: $white;
+    }
+  }
+
+  &__lg {
+    .block__ttl__hdng {
+      font-size: $font_size_70;
+      line-height: 4.75rem;
+      color: $primary;
+
+      span {
+        font-family: $primary_bold;
+      }
+
+      @include devices(mobile-tablet) {
+        font-size: $font_size_40;
+        line-height: 3rem;
+      }
+    }
+  }
+
+  &__md {
+    .block__ttl__hdng {
+      font-size: 3.375rem;
+      line-height: 3.5rem;
+      font-family: $primary_regular;
+
+      @include devices(mobile) {
+        font-size: 3rem;
+      }
+
+      span {
+        font-family: $primary_bold;
+      }
+    }
+  }
+
+  &__sm {
+    .block__ttl__hdng {
+      font-size: 2.25rem;
+      line-height: 2.875rem;
+      color: $primary;
+      font-family: $primary_regular;
+    }
+
+    .block__ttl__desc,
+    p {
+      font-size: $font_size_18;
+    }
+  }
+
+  &__secondary {
+    .block__ttl__hdng {
+      color: $secondary;
+    }
+  }
+
+  &__dark {
+    .block__ttl__hdng {
+      color: $darkGrey;
+      span {
+        color: $darkGrey;
+      }
+    }
+
+    .block__ttl__desc,
+    p {
+      color: $bodyColor;
+    }
+  }
+
+  &.text-end {
+    @include devices(mobile-tablet) {
+      text-align: left !important;
+    }
+  }
+}
+
+.cmn__cont {
+  &__wt {
+    p {
+      color: $white;
+    }
+  }
+}
+
+.page__title {
+  padding: 7.5rem 0px 5rem;
+
+  @include devices(mobile-tablet) {
+    padding: 2rem 0;
+  }
+
+  .d-flex.mt-5 {
+    @include devices(mobile) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .page__hdng {
+    font-size: 5rem;
+    line-height: 5rem;
+    color: $light_grey;
+    font-family: $primary_regular;
+    word-break: break-all;
+
+    @include devices(mobile) {
+      font-size: 44px;
+      line-height: 56px;
+    }
+  }
+}
+
+.text-primary {
+  color: $primary !important;
+}

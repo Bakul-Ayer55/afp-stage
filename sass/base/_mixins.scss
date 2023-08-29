@@ -1,0 +1,140 @@
+@mixin devices($breakpoint) {
+  //the name of the mixin is devices
+
+  @if $breakpoint == scaledRatio {
+    @media (-webkit-device-pixel-ratio: 1.25) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktopLarge {
+    @media only screen and (min-width: 1800px) and (max-width: 3000px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktopMedium {
+    @media only screen and (min-width: 1400px) and (max-width: 1699px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptopDesktop {
+    @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptopOnly {
+    @media only screen and (min-width: 1200px) and (max-width: 1365px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktopOnly {
+    @media only screen and (min-width: 1300px) and (max-width: 1399px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobileLaptop {
+    @media only screen and (min-width: 320px) and (max-width: 1270px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media only screen and (min-width: 1170px) and (max-width: 1299px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-landscape {
+    @media only screen and (min-width: 1024px) and (max-width: 1169px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == ipad {
+    @media only screen and (min-width: 768px) and (max-width: 990.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == ipad-up {
+    @media only screen and (min-width: 991px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile-tablet {
+    @media only screen and (min-width: 320px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile-landscape {
+    @media only screen and (min-width: 575px) and (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+@mixin image_cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin relative_hidden {
+  position: relative;
+  overflow: hidden;
+}
+
+@mixin gradient_primary {
+  background: linear-gradient(90deg, #6d328a 0%, #eb5c35 100%) !important;
+}
+
+@mixin transition {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexAlignEnd {
+  display: flex;
+  align-items: end;
+}
+
+@mixin flexCenterEnd {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}

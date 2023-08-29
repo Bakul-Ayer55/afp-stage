@@ -1,0 +1,31 @@
+@import 'base/base-all';
+@import 'components/components-all';
+
+.menu-open {
+  @include devices(mobile) {
+    overflow: hidden;
+  }
+}
+
+.main-container {
+  overflow-x: hidden;
+  transform: none !important;
+}
+
+.middle-sec {
+  padding: 134px 0 80px;
+
+  @include devices(mobile) {
+    padding: 80px 0 0;
+  }
+}
+
+.cmn__section {
+  padding: 4rem 0;
+  margin: 4rem 0;
+
+  @include devices(mobile) {
+    padding: 3rem 0;
+    margin: 3rem 0;
+  }
+}

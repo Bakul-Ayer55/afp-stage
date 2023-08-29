@@ -1,0 +1,155 @@
+@import '../base/variables', '../base/mixins';
+
+.primary__card {
+  position: relative;
+
+  .card__img {
+    height: 330px;
+    position: relative;
+
+    @include devices(mobile) {
+      height: 290px;
+    }
+
+    &__thumb {
+      width: 100%;
+      height: 100%;
+      -webkit-clip-path: polygon(0% 0%, 0% 100%, 72% 110%, 150% 0%, 0% 0%);
+      clip-path: polygon(0% 0%, 0% 100%, 72% 110%, 150% 0%, 0% 0%);
+      @include relative_hidden;
+      @include transition;
+
+      img {
+        @include image_cover;
+        @include transition;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:nth-child(1) {
+          -webkit-transform: translatex(50%) scalex(2);
+          transform: translatex(50%) scalex(2);
+          opacity: 0;
+          -webkit-filter: blur(10px);
+          filter: blur(10px);
+        }
+      }
+    }
+
+    .badge {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      z-index: 11;
+    }
+  }
+
+  .link__btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .card__cont {
+    margin: 20px 0 0;
+
+    .card__ttl {
+      color: $secondary;
+      font-size: $font_size_26;
+      margin: 0;
+      font-family: $primary_bold;
+
+      @include devices(mobile-tablet) {
+        font-size: $font_size_24;
+        line-height: 3rem;
+        padding-right: 50px;
+        // min-height: 40px;
+      }
+
+      sup {
+        font-size: 16px;
+        top: -1em;
+        margin-left: 10px;
+      }
+    }
+
+    .card__desc {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-family: $secondary_light;
+      margin: 1.5rem 0 0;
+    }
+  }
+
+  &:hover {
+    .card__img__thumb {
+      clip-path: polygon(0% 0%, 0% 100%, 68% 110%, 150% 0%, 0% 0%);
+      img {
+        transform: scale(1.1);
+
+        &:nth-child(1) {
+          transform: translatex(0) scalex(1);
+          opacity: 1;
+          filter: blur(0);
+        }
+
+        &:nth-child(2) {
+          transform: translatex(-50%) scalex(2);
+          opacity: 0;
+          filter: blur(10px);
+        }
+      }
+    }
+
+    .link__btn {
+      background: $primary;
+      img,
+      svg {
+        transform: rotate(45deg);
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  height: 100%;
+}
+
+.history__card {
+  &__inn {
+    background: $light_grey_1;
+    padding: 1.5rem 4.5rem 1.5rem 1.5rem;
+    clip-path: polygon(0% 0%, 0% 100%, 64% 130%, 120% 0%, 0% 0%);
+    @include transition;
+
+    .card__ttl {
+      @include devices(mobile-tablet) {
+        padding-right: 0 !important;
+      }
+    }
+  }
+
+  .card__cont {
+    margin: 0;
+  }
+
+  &:hover {
+    .history__card__inn {
+      background: $secondary;
+
+      .card__ttl,
+      .card__desc {
+        color: $white;
+      }
+    }
+    .link__btn {
+      svg {
+        transform: none;
+      }
+    }
+  }
+}

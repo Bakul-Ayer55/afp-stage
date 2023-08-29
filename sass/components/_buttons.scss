@@ -1,0 +1,273 @@
+@import '../base/variables', '../base/mixins';
+
+.btn,
+.frm_style_formidable-style.with_frm_style .frm_submit button,
+.frm_button_submit {
+  min-width: 150px;
+  line-height: 40px;
+  padding: 0 15px;
+  color: $white;
+  font-size: 16px;
+  border-radius: 1px;
+  background: $primary;
+  border: 2px solid $primary;
+  font-family: $primary_bold;
+  @include transition;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 120% 0%, 0% 0%);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 120% 0%, 0% 0%);
+
+  @include devices(laptopOnly) {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  @include devices(laptop) {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  @include devices(tablet-landscape) {
+    padding: 0 8px;
+    font-size: 15px;
+  }
+
+  @include devices(mobile-tablet) {
+    font-size: 13px;
+    min-width: 100px;
+    line-height: 34px;
+    padding: 0 6px;
+  }
+
+  span {
+    @include flexCenterBetween;
+  }
+
+  &:hover {
+    background: $primary;
+    border-color: $primary;
+    color: $white;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 120% 0%, 0% 0%);
+    clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 120% 0%, 0% 0%);
+  }
+
+  &:focus {
+    box-shadow: none;
+    // border: none;
+  }
+
+  &.btn__sm {
+    min-width: 140px;
+
+    @include devices(mobile-tablet) {
+      min-width: 100px;
+    }
+  }
+
+  &.btn-primary,
+  .frm_style_formidable-style.with_frm_style .frm_submit button,
+  .frm_button_submit {
+    background: $primary;
+    border: 2px solid $primary;
+    color: $white;
+
+    &:hover {
+      background: $secondary;
+      border-color: $secondary;
+      color: $white;
+    }
+  }
+
+  &.btn-secondary {
+    background: $secondary;
+    border-color: $secondary;
+
+    &:hover {
+      background: $secondary;
+      border-color: $secondary;
+      color: $white;
+    }
+  }
+
+  &.btn-secondary-white {
+    background: $white;
+    border-color: $white;
+    color: $bodyColor;
+
+    &:hover {
+      background: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+  }
+
+  &.btn-dark {
+    background: $bodyColor;
+    border-color: $bodyColor;
+
+    &:hover {
+      background: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+  }
+
+  &.btn-black {
+    background: $black;
+    border-color: $black;
+    color: $white;
+
+    &:hover {
+      background: $primary;
+      border-color: $primary;
+    }
+  }
+
+  &.btn-outline-primary {
+    background: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+
+  &.btn-transparent-primary {
+    background: none;
+    border: 2px solid $primary;
+    color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+
+  &.btn-outline-secondary {
+    background: transparent;
+    border-color: $secondary;
+    color: $secondary;
+
+    &:hover {
+      background: $secondary;
+      color: $white !important;
+    }
+  }
+
+  &.btn-outline-light {
+    background: transparent;
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $bodyColor;
+    }
+  }
+
+  &.btn-close-white {
+    filter: none;
+    background: $white;
+    color: $bodyColor;
+    border-color: $white;
+
+    &:hover {
+      background: $primary;
+      color: $white !important;
+      border-color: $primary;
+    }
+  }
+
+  &.btn-sm {
+    min-width: 125px;
+  }
+
+  &.btn-outline-dark {
+    border-color: $bodyColor;
+    color: $bodyColor;
+    background: transparent;
+
+    &:hover {
+      background: $bodyColor;
+      color: $white;
+    }
+  }
+
+  &.disabled {
+    background: $light_grey;
+    color: $white;
+    border-color: $light_grey;
+  }
+}
+
+.cmn__link {
+  font-size: 1rem;
+  font-family: $primary_regular;
+  color: $primary;
+  text-decoration: underline;
+
+  &__wt {
+    color: $white;
+
+    // i {
+    //   svg {
+    //     path {
+    //       stroke: $white;
+    //     }
+    //   }
+    // }
+
+    &:hover {
+      color: $secondary;
+
+      i {
+        svg {
+          path {
+            stroke: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.link__btn {
+  width: 44px;
+  height: 44px;
+  background: $white;
+  @include flexCenter;
+  @include transition;
+
+  @include devices(mobile-tablet) {
+    width: 32px;
+    height: 32px;
+  }
+
+  img,
+  svg {
+    @include transition;
+  }
+
+  &.link__btn__dark {
+    background: $secondary;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &:hover {
+    background: $primary;
+    img,
+    svg {
+      transform: rotate(45deg);
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+}

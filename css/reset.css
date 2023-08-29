@@ -1,0 +1,980 @@
+@font-face {
+  font-family: "dm_sansmedium";
+  src: url("../fonts/dmsans-medium-webfont.woff2") format("woff2"), url("../fonts/dmsans-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dm_sansregular";
+  src: url("../fonts/dmsans-regular-webfont.woff2") format("woff2"), url("../fonts/dmsans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dm_sansbold";
+  src: url("../fonts/dmsans-bold-webfont.woff2") format("woff2"), url("../fonts/dmsans-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "josefin_sansbold";
+  src: url("../fonts/josefinsans-bold-webfont.woff2") format("woff2"), url("../fonts/josefinsans-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "josefin_sanslight";
+  src: url("../fonts/josefinsans-light-webfont.woff2") format("woff2"), url("../fonts/josefinsans-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "josefin_sansregular";
+  src: url("../fonts/josefinsans-regular-webfont.woff2") format("woff2"), url("../fonts/josefinsans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "josefin_sanssemibold";
+  src: url("../fonts/josefinsans-semibold-webfont.woff2") format("woff2"), url("../fonts/josefinsans-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "josefin_sansthin";
+  src: url("../fonts/josefinsans-thin-webfont.woff2") format("woff2"), url("../fonts/josefinsans-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+header,
+footer,
+section,
+aside,
+nav,
+article,
+figure,
+address,
+audio,
+video {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+  font-size: 100%;
+}
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1169px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (-webkit-device-pixel-ratio: 1.25) {
+  html {
+    font-size: 85%;
+  }
+}
+
+body {
+  font-family: "dm_sansregular";
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  margin-bottom: 0;
+  font-family: "dm_sansbold";
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+  font-family: "dm_sansbold";
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 2.375rem;
+  font-family: "dm_sansbold";
+}
+
+h5 {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  font-family: "dm_sansbold";
+}
+
+input,
+button {
+  font-family: "dm_sansregular";
+}
+
+.field__blk {
+  margin-bottom: 24px;
+}
+
+.form-control,
+.form-select,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=url],
+input[type=tel],
+input[type=phone],
+input[type=search],
+select,
+textarea,
+.frm_form_fields_style,
+.with_frm_style .frm_scroll_box .frm_opt_container,
+.frm_form_fields_active_style,
+.frm_form_fields_error_style,
+.with_frm_style .frm-card-element.StripeElement,
+.with_frm_style .chosen-container-multi .chosen-choices,
+.with_frm_style .chosen-container-single .chosen-single,
+.with_frm_style input[type=text],
+.with_frm_style input[type=password],
+.with_frm_style input[type=email],
+.with_frm_style input[type=number],
+.with_frm_style input[type=url],
+.with_frm_style input[type=tel],
+.with_frm_style input[type=file],
+.with_frm_style input[type=search],
+.with_frm_style select,
+.with_frm_style .frm-card-element.StripeElement,
+.with_frm_style textarea {
+  border: none;
+  border-bottom: 1px solid rgba(190, 22, 34, 0.4);
+  height: 45px;
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
+  color: #000000 !important;
+  font-family: "dm_sansregular";
+  background: none;
+  font-size: 18px;
+  box-shadow: none;
+}
+.form-control:focus,
+.form-select:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=url]:focus,
+input[type=tel]:focus,
+input[type=phone]:focus,
+input[type=search]:focus,
+select:focus,
+textarea:focus,
+.frm_form_fields_style:focus,
+.with_frm_style .frm_scroll_box .frm_opt_container:focus,
+.frm_form_fields_active_style:focus,
+.frm_form_fields_error_style:focus,
+.with_frm_style .frm-card-element.StripeElement:focus,
+.with_frm_style .chosen-container-multi .chosen-choices:focus,
+.with_frm_style .chosen-container-single .chosen-single:focus,
+.with_frm_style input[type=text]:focus,
+.with_frm_style input[type=password]:focus,
+.with_frm_style input[type=email]:focus,
+.with_frm_style input[type=number]:focus,
+.with_frm_style input[type=url]:focus,
+.with_frm_style input[type=tel]:focus,
+.with_frm_style input[type=file]:focus,
+.with_frm_style input[type=search]:focus,
+.with_frm_style select:focus,
+.with_frm_style .frm-card-element.StripeElement:focus,
+.with_frm_style textarea:focus {
+  box-shadow: none;
+  border-color: #be1622;
+  background: none;
+}
+
+.with_frm_style textarea {
+  height: 170px;
+}
+
+.form-floating {
+  margin-bottom: 35px !important;
+}
+.form-floating .form-control,
+.form-floating .form-select,
+.form-floating input[type=text],
+.form-floating input[type=password],
+.form-floating input[type=email],
+.form-floating input[type=number],
+.form-floating input[type=url],
+.form-floating input[type=tel],
+.form-floating input[type=phone],
+.form-floating input[type=search],
+.form-floating select,
+.form-floating textarea,
+.form-floating .frm_form_fields_style,
+.form-floating .with_frm_style .frm_scroll_box .frm_opt_container,
+.form-floating .frm_form_fields_active_style,
+.form-floating .frm_form_fields_error_style,
+.form-floating .with_frm_style .frm-card-element.StripeElement,
+.form-floating .with_frm_style .chosen-container-multi .chosen-choices,
+.form-floating .with_frm_style .chosen-container-single .chosen-single {
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  padding: 10px 0 5px !important;
+  font-family: "dm_sansregular";
+  background: none;
+  font-size: 16px;
+  color: #000000;
+  box-shadow: none;
+}
+.form-floating .form-control:focus,
+.form-floating .form-select:focus,
+.form-floating input[type=text]:focus,
+.form-floating input[type=password]:focus,
+.form-floating input[type=email]:focus,
+.form-floating input[type=number]:focus,
+.form-floating input[type=url]:focus,
+.form-floating input[type=tel]:focus,
+.form-floating input[type=phone]:focus,
+.form-floating input[type=search]:focus,
+.form-floating select:focus,
+.form-floating textarea:focus,
+.form-floating .frm_form_fields_style:focus,
+.form-floating .with_frm_style .frm_scroll_box .frm_opt_container:focus,
+.form-floating .frm_form_fields_active_style:focus,
+.form-floating .frm_form_fields_error_style:focus,
+.form-floating .with_frm_style .frm-card-element.StripeElement:focus,
+.form-floating .with_frm_style .chosen-container-multi .chosen-choices:focus,
+.form-floating .with_frm_style .chosen-container-single .chosen-single:focus {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+.form-floating label,
+.form-floating .frm_primary_label {
+  height: auto;
+  top: -2px;
+  left: 0;
+  padding: 0.5rem 0;
+  color: #000000;
+  font-family: "dm_sansbold";
+  font-size: 1.125rem;
+}
+.form-floating textarea.form-control {
+  height: 100px;
+  padding: 30px 0 !important;
+  resize: none;
+}
+
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > .form-control:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > input[type=text]:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > input[type=password]:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > input[type=email]:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > input[type=number]:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > input[type=url]:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > input[type=tel]:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > input[type=phone]:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > input[type=search]:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > select:not(:-moz-placeholder-shown) ~ .frm_primary_label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ .frm_primary_label {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label,
+.form-floating > .form-control:focus ~ .frm_primary_label,
+.form-floating > .form-control:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > .form-select ~ .frm_primary_label,
+.form-floating > input[type=text]:focus ~ .frm_primary_label,
+.form-floating > input[type=password]:focus ~ .frm_primary_label,
+.form-floating > input[type=email]:focus ~ .frm_primary_label,
+.form-floating > input[type=number]:focus ~ .frm_primary_label,
+.form-floating > input[type=url]:focus ~ .frm_primary_label,
+.form-floating > input[type=tel]:focus ~ .frm_primary_label,
+.form-floating > input[type=phone]:focus ~ .frm_primary_label,
+.form-floating > input[type=search]:focus ~ .frm_primary_label,
+.form-floating > select:focus ~ .frm_primary_label,
+.form-floating > textarea:focus ~ .frm_primary_label,
+.form-floating > input[type=text]:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > input[type=password]:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > input[type=email]:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > input[type=number]:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > input[type=url]:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > input[type=tel]:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > input[type=phone]:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > input[type=search]:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > select:not(:placeholder-shown) ~ .frm_primary_label,
+.form-floating > textarea:not(:placeholder-shown) ~ .frm_primary_label {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.form-floating > textarea.form-control:not(:-moz-placeholder-shown) {
+  height: 100px;
+  padding: 30px 0 !important;
+  resize: none;
+}
+
+.form-floating > textarea.form-control:focus,
+.form-floating > textarea.form-control:not(:placeholder-shown) {
+  height: 100px;
+  padding: 30px 0 !important;
+  resize: none;
+}
+
+textarea.form-control {
+  height: 100px;
+  padding: 0 0 0 80px;
+  resize: none;
+}
+
+.with_frm_style .frm_primary_label {
+  display: flex !important;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: "dm_sansbold";
+  color: #000000 !important;
+}
+.with_frm_style .frm_primary_label strong {
+  font-size: 14px;
+  font-family: #be1622;
+  margin-right: 60px;
+}
+
+::-moz-placeholder {
+  color: #000000 !important;
+}
+
+::placeholder {
+  color: #000000 !important;
+}
+
+.form-floating > .form-control::-moz-placeholder {
+  font-size: 0 !important;
+}
+
+.form-floating > .form-control::placeholder {
+  font-size: 0 !important;
+}
+
+strong {
+  font-weight: 400;
+  font-family: "dm_sansbold";
+}
+
+small {
+  color: #666;
+  font-size: 0.6875rem;
+}
+
+:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "dm_sansregular";
+}
+
+a:focus {
+  outline: none;
+}
+
+p {
+  line-height: 1.625rem;
+  font-size: 1rem;
+  color: #000000;
+  font-family: "josefin_sansregular";
+}
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+  p {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1169px) {
+  p {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+}
+@media only screen and (min-width: 1170px) and (max-width: 1299px) {
+  p {
+    font-size: 1.4rem;
+    line-height: 2.25rem;
+  }
+}
+
+ul {
+  padding-left: 15px;
+}
+ul li {
+  margin: 0 0 10px;
+  line-height: 1.875rem;
+  font-size: 1.125rem;
+  font-family: "josefin_sansregular";
+}
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+img {
+  border: none;
+  outline: none;
+}
+
+a {
+  color: #278cff;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+}
+
+a:hover,
+a:focus {
+  color: #000000;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+}
+
+.container {
+  width: 1230px;
+  max-width: 1230px;
+}
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 var(--bs-gutter-x, 0.75rem);
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1169px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+@media only screen and (min-width: 1170px) and (max-width: 1299px) {
+  .container {
+    padding: 0 30px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder,
+input:-moz-placeholder {
+  color: #000000;
+  font-size: 1rem;
+}
+
+button {
+  text-transform: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+
+/* Common CSS end here */
+/** owl css **/
+body .owl-carousel .owl-nav {
+  display: flex;
+  margin: 40px 0 0;
+}
+body .owl-carousel .owl-nav .owl-prev,
+body .owl-carousel .owl-nav .owl-next {
+  width: 82px;
+  height: 82px;
+  background-color: #040404;
+  border-radius: 0;
+  transition: all 0.5s ease-in-out;
+}
+@media only screen and (max-width: 767px) {
+  body .owl-carousel .owl-nav .owl-prev,
+  body .owl-carousel .owl-nav .owl-next {
+    width: 50px;
+    height: 50px;
+  }
+}
+body .owl-carousel .owl-nav .owl-prev span,
+body .owl-carousel .owl-nav .owl-next span {
+  display: none;
+}
+body .owl-carousel .owl-nav .owl-prev:hover,
+body .owl-carousel .owl-nav .owl-next:hover {
+  background-color: #be1622;
+}
+body .owl-carousel .owl-nav .owl-prev.disabled,
+body .owl-carousel .owl-nav .owl-next.disabled {
+  background-color: #9b9b9b;
+  cursor: not-allowed;
+}
+body .owl-carousel .owl-nav .owl-prev {
+  background-image: url(../images/left-arw.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% -60%, 0% 40%);
+          clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% -60%, 0% 40%);
+}
+@media only screen and (max-width: 767px) {
+  body .owl-carousel .owl-nav .owl-prev {
+    background-size: 20px 20px;
+  }
+}
+body .owl-carousel .owl-nav .owl-next {
+  background-image: url(../images/right-arw.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 60% 110%, 150% 0%, 0% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 60% 110%, 150% 0%, 0% 0%);
+}
+@media only screen and (max-width: 767px) {
+  body .owl-carousel .owl-nav .owl-next {
+    background-size: 20px 20px;
+  }
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-prev,
+body .owl-carousel.owl__nav__light .owl-nav .owl-next {
+  background-color: #ffffff;
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-prev:hover,
+body .owl-carousel.owl__nav__light .owl-nav .owl-next:hover {
+  background-color: #be1622;
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-prev.disabled,
+body .owl-carousel.owl__nav__light .owl-nav .owl-next.disabled {
+  background-color: #9b9b9b;
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-next {
+  background-image: url(../images/right-arw-dark.svg);
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-next:hover {
+  background-image: url(../images/right-arw.svg);
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-next.disabled {
+  background: #9b9b9b url(../images/right-arw.svg) no-repeat center;
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-prev {
+  background-image: url(../images/left-arw-dark.svg);
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-prev:hover {
+  background-image: url(../images/left-arw.svg);
+}
+body .owl-carousel.owl__nav__light .owl-nav .owl-prev.disabled {
+  background: #9b9b9b url(../images/left-arw.svg) no-repeat center;
+}
+body .owl-carousel .owl-dots {
+  position: relative;
+  bottom: inherit;
+  left: inherit;
+  display: flex;
+  width: 100%;
+  margin: 5rem 0 0;
+}
+body .owl-carousel .owl-dots:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #dfdfdf;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .owl-carousel .owl-dots .owl-dot {
+  height: 6px;
+  width: auto;
+  background: transparent !important;
+  flex: 0 1 100%;
+  border-radius: 0;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+body .owl-carousel .owl-dots .owl-dot:hover {
+  height: 6px;
+  background: #040404 !important;
+}
+body .owl-carousel .owl-dots .owl-dot.active {
+  background: #040404 !important;
+}
+
+.form-cstm-fld {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: rgba(36, 36, 36, 0.75);
+}
+.form-cstm-fld .checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #000000;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+}
+.form-cstm-fld .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 0px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.form-cstm-fld input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.form-cstm-fld input:checked ~ .checkmark {
+  background-color: #be1622;
+  border-color: #be1622;
+}
+.form-cstm-fld input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.form-check {
+  padding-left: 40px;
+  position: relative;
+}
+.form-check .form-check-input,
+.form-check input[type=checkbox] {
+  border-radius: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+  margin: 0;
+}
+.form-check .form-check-input:checked,
+.form-check input[type=checkbox]:checked {
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #be1622;
+  border-color: #be1622;
+}
+.form-check label {
+  color: #585858 !important;
+  font-size: 1.125rem;
+}
+.form-check label a {
+  color: #585858;
+  font-family: "dm_sansbold";
+}
+.form-check label a:hover {
+  color: #be1622;
+}
+
+.cntc__person__blk {
+  margin: 40px 0 0;
+  padding: 40px 0 0;
+  border-top: 1px solid rgba(70, 70, 70, 0.3);
+}
+.cntc__person__blk p {
+  margin: 0 0 24px;
+  font-size: 1.375rem;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+}
+.cntc__person__blk p span {
+  color: #040404;
+  font-family: "dm_sansbold";
+  margin-right: 10px;
+}
+.cntc__person__blk p a {
+  font-size: 1.375rem;
+  color: #000000;
+}
+.cntc__person__blk p a:hover {
+  color: #be1622;
+}
+.cntc__person__blk p:last-child {
+  margin-bottom: 0;
+}
+
+.with_frm_style .frm_radio label,
+.with_frm_style .frm_checkbox label {
+  padding-left: 44px !important;
+  position: relative;
+  text-indent: inherit !important;
+  min-height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  color: #040404 !important;
+}
+.with_frm_style .frm_radio label a,
+.with_frm_style .frm_checkbox label a {
+  color: #040404;
+  font-family: "dm_sansbold";
+}
+.with_frm_style .frm_radio label a:hover,
+.with_frm_style .frm_checkbox label a:hover {
+  color: #be1622;
+}
+.with_frm_style .frm_radio label input[type=checkbox],
+.with_frm_style .frm_checkbox label input[type=checkbox] {
+  border-radius: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid rgba(245, 245, 245, 0.3) !important;
+  border-radius: 1px;
+  -moz-appearance: auto;
+       appearance: auto;
+  -webkit-appearance: auto;
+}
+.with_frm_style .frm_radio label input[type=checkbox]:before,
+.with_frm_style .frm_checkbox label input[type=checkbox]:before {
+  display: none;
+}
+.with_frm_style .frm_radio label input[type=checkbox]:focus,
+.with_frm_style .frm_checkbox label input[type=checkbox]:focus {
+  background-color: none !important;
+  box-shadow: none !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+.with_frm_style .frm_radio label input[type=checkbox]:checked,
+.with_frm_style .frm_checkbox label input[type=checkbox]:checked {
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.frm_style_formidable-style.with_frm_style .form-field input:not([type=file]):focus,
+.frm_style_formidable-style.with_frm_style select:focus,
+.frm_style_formidable-style.with_frm_style textarea:focus,
+.frm_style_formidable-style.with_frm_style .frm_focus_field input[type=text]:focus,
+.frm_style_formidable-style.with_frm_style .frm_focus_field input[type=password]:focus,
+.frm_style_formidable-style.with_frm_style .frm_focus_field input[type=email]:focus,
+.frm_style_formidable-style.with_frm_style .frm_focus_field input[type=number]:focus,
+.frm_style_formidable-style.with_frm_style .frm_focus_field input[type=url]:focus,
+.frm_style_formidable-style.with_frm_style .frm_focus_field input[type=tel]:focus,
+.frm_style_formidable-style.with_frm_style .frm_focus_field input[type=search]:focus,
+.frm_form_fields_active_style,
+.frm_style_formidable-style.with_frm_style .frm_focus_field .frm-card-element.StripeElement,
+.frm_style_formidable-style.with_frm_style .chosen-container-single.chosen-container-active .chosen-single,
+.frm_style_formidable-style.with_frm_style .chosen-container-active .chosen-choices {
+  box-shadow: none;
+  border-color: #be1622;
+  background: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+.frm_style_formidable-style.with_frm_style .frm_blank_field input[type=text],
+.frm_style_formidable-style.with_frm_style .frm_blank_field input[type=password],
+.frm_style_formidable-style.with_frm_style .frm_blank_field input[type=url],
+.frm_style_formidable-style.with_frm_style .frm_blank_field input[type=tel],
+.frm_style_formidable-style.with_frm_style .frm_blank_field input[type=number],
+.frm_style_formidable-style.with_frm_style .frm_blank_field input[type=email],
+.frm_style_formidable-style.with_frm_style .frm_blank_field textarea,
+.frm_style_formidable-style.with_frm_style .frm_blank_field .mce-edit-area iframe,
+.frm_style_formidable-style.with_frm_style .frm_blank_field select:not(.ui-datepicker-month):not(.ui-datepicker-year),
+.frm_form_fields_error_style,
+.frm_style_formidable-style.with_frm_style .frm_blank_field .frm-g-recaptcha iframe,
+.frm_style_formidable-style.with_frm_style .frm_blank_field .g-recaptcha iframe,
+.frm_style_formidable-style.with_frm_style .frm_blank_field .frm-card-element.StripeElement,
+.frm_style_formidable-style.with_frm_style .frm_blank_field .chosen-container-multi .chosen-choices,
+.frm_style_formidable-style.with_frm_style .frm_blank_field .chosen-container-single .chosen-single,
+.frm_style_formidable-style.with_frm_style .frm_form_field :invalid {
+  border-width: 0 0 2px 0 !important;
+  background: none !important;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: "dm_sansbold";
+}
+.form-label strong {
+  font-size: 14px;
+  font-family: #be1622;
+  margin-right: 60px;
+}
+
+.form-select,
+.frm_form_field select {
+  background: transparent url(../images/drop-arrow.svg) no-repeat 100% center !important;
+}
+.form-select:focus,
+.frm_form_field select:focus {
+  background: transparent url(../images/drop-arrow.svg) no-repeat 100% center !important;
+}
+.form-select option,
+.frm_form_field select option {
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #040404;
+}
+
+.menu__modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu__modal::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu__modal::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}
+
+.form-check-label {
+  font-size: 16px;
+  line-height: 20px;
+}
+.form-check-label a:hover {
+  color: #be1622 !important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+  input[type=date] {
+    width: 100%;
+    border: none;
+    height: 57px;
+    background: #e9e9e9 url(../images/angle-down-dark.svg) no-repeat 95% center !important;
+    padding: 0 50px 0 24px;
+    border-radius: 12px;
+    font-family: "dm_sansbold";
+    font-size: 1.25rem;
+    -moz-appearance: none;
+         appearance: none;
+    -webkit-appearance: none;
+  }
+}

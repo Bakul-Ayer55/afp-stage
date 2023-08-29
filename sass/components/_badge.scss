@@ -1,0 +1,88 @@
+@import '../base/variables', '../base/mixins';
+
+.badge {
+  padding: 0 12px;
+  border-radius: 0;
+  // border: 2px solid $white !important;
+  background: $black !important;
+  line-height: 38px;
+  text-align: center;
+  font-size: 18px;
+  color: $white;
+  font-family: $primary_medium;
+  font-weight: 400;
+  text-shadow: none;
+  min-width: 106px;
+  gap: 8px;
+  display: inline-flex;
+  align-items: center;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% -9em, 0% 20px);
+  position: relative;
+
+  @include devices(mobile-tablet) {
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  &:before {
+    content: '';
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% -9em, 0% 19px);
+    z-index: -1;
+  }
+
+  i {
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &.bg-secondary {
+    border-color: $bodyColor !important;
+    color: $bodyColor !important;
+
+    i {
+      svg {
+        path {
+          fill: $bodyColor;
+        }
+      }
+    }
+  }
+
+  &.bg-red {
+    border-color: $primary !important;
+    color: $primary !important;
+    background: $primary !important;
+
+    i {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  &.badge-rounded {
+    clip-path: inherit;
+    border-radius: 50px;
+    border: 2px solid $secondary !important;
+    color: $secondary !important;
+    min-width: 85px;
+    justify-content: center;
+    svg {
+      path {
+        fill: $secondary !important;
+      }
+    }
+  }
+}

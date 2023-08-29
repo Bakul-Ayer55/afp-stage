@@ -1,0 +1,153 @@
+@import '../base/variables', '../base/mixins';
+
+.footer {
+  padding: 5rem 0;
+  background: $white;
+  position: relative;
+  border-top: 1px solid $light_grey;
+
+  @include devices(mobile) {
+    padding: 3rem 0;
+  }
+
+  .ftr__logo {
+    @include devices(mobile) {
+      @include flexCenter;
+    }
+
+    svg,
+    img {
+      @include devices(mobile) {
+        width: 160px;
+      }
+    }
+  }
+
+  .scl__links {
+    @include devices(mobile) {
+      justify-content: center;
+      margin: 20px 0 !important;
+    }
+  }
+
+  .ftr__top {
+    padding-bottom: 5rem;
+
+    @include devices(mobile) {
+      padding-bottom: 3rem;
+    }
+
+    .row {
+      @include devices(mobile) {
+        row-gap: 30px;
+      }
+    }
+  }
+
+  .ftr__col {
+    @include devices(mobile) {
+      width: 50%;
+    }
+  }
+
+  .ftr__hdng {
+    margin-bottom: 20px;
+    font-size: $font_size_18;
+    color: $secondary;
+    font-family: $primary_bold;
+
+    @include devices(mobile) {
+      font-size: $font_size_22;
+    }
+  }
+
+  .ftr__links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include devices(mobile) {
+      row-gap: 15px;
+    }
+
+    li {
+      margin: 0;
+
+      p {
+        color: $secondary;
+        font-size: 16px;
+        line-height: 22px;
+        display: block;
+        font-family: $primary_regular;
+
+        strong {
+          font-family: $primary_medium;
+        }
+      }
+
+      a {
+        color: $secondary;
+        font-size: 16px;
+        line-height: 16px;
+        display: block;
+
+        @include devices(mobile) {
+          line-height: 22px;
+        }
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .ftr__btm {
+    padding: 5rem 0 0;
+    background: $light_grey_1;
+
+    @include devices(mobile) {
+      padding-top: 3rem;
+    }
+
+    .row {
+      @include devices(mobile) {
+        row-gap: 50px;
+      }
+    }
+  }
+
+  .copyright__row {
+    margin-top: 5rem;
+
+    @include devices(mobile) {
+      margin-top: 3rem;
+      row-gap: 14px !important;
+      text-align: center;
+    }
+
+    p {
+      font-size: $font_size_18;
+      color: $secondary;
+      font-family: $primary_regular;
+      width: auto;
+
+      @include devices(mobile) {
+        width: 100%;
+      }
+
+      a {
+        color: $secondary;
+        font-family: $primary_bold;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      strong {
+        font-family: $primary_medium;
+      }
+    }
+  }
+}
