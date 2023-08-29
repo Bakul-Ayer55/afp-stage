@@ -528,8 +528,8 @@ a:focus {
 }
 
 .container {
-  width: 1230px;
-  max-width: 1230px;
+  width: 1520px;
+  max-width: 1520px;
 }
 @media only screen and (min-width: 320px) and (max-width: 1023px) {
   .container {
@@ -550,6 +550,12 @@ a:focus {
     padding: 0 30px;
     width: 100%;
     max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1366px) and (max-width: 1521.98px) {
+  .container {
+    width: 1300px;
+    max-width: 1300px;
   }
 }
 

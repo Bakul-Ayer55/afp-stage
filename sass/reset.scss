@@ -453,8 +453,8 @@ a:focus {
 }
 
 .container {
-  width: 1230px;
-  max-width: 1230px;
+  width: 1520px;
+  max-width: 1520px;
 
   @include devices(mobile-tablet) {
     width: 100%;
@@ -472,6 +472,11 @@ a:focus {
     padding: 0 30px;
     width: 100%;
     max-width: 100%;
+  }
+
+  @include devices(desktopMedium) {
+    width: 1300px;
+    max-width: 1300px;
   }
 }
 
